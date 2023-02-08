@@ -37,8 +37,8 @@ Click on any notes in the list to the left-side to display preiously logged note
 Prepare window for new note (If previous note is visible):\
 Click the '+' icon in the top right corner of the page to clear the active note. This will allow you to populate the Title and Text fields once more.
 
-![alt text](assets/screenshot1.JPG)
-![alt text](assets/screenshot2.JPG)
+![alt text](/assets/screenshot1.JPG)
+![alt text](/assets/screenshot2.JPG)
 
 ## License
 
