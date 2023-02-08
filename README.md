@@ -20,9 +20,9 @@ https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs
 Local Server Preparation (if not using Heroku link supplied)
 1) Prepare npm on your system by running the following commands in your gitBash or CLI:\
 npm init -y\
-npm install\
+npm install
 
-2)Once installed, navigate to the app root folder and start a local server using the following command:\
+2) Once installed, navigate to the app root folder and start a local server using the following command:\
 npm start
 
 ## Usage
@@ -37,8 +37,8 @@ Click on any notes in the list to the left-side to display preiously logged note
 Prepare window for new note (If previous note is visible):\
 Click the '+' icon in the top right corner of the page to clear the active note. This will allow you to populate the Title and Text fields once more.
 
-![alt text](assets/screenshot1.JPG)\
-![alt text](assets/screenshot2.JPG)\
+![alt text](assets/screenshot1.JPG)
+![alt text](assets/screenshot2.JPG)
 
 ## License
 
