@@ -14,7 +14,6 @@ const path = require('path');
 //Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-
 app.use(express.static('public'));
 
 //-----------------GET root-----------------------
@@ -30,7 +29,7 @@ app.get('/notes', (req, res) => {
 })
 
 app.get('/api/notes', (req, res) => {
-    // res.json(db);
+    
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 })
 
@@ -75,6 +74,7 @@ app.post('/api/notes', (req, res) => {
     }
 });
 
+//---------------------------Listener----------------------
 
 app.listen(PORT, () => {
     console.log(`note-taker app listening at http://localhost:${PORT}`);

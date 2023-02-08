@@ -57,9 +57,6 @@ const deleteNote = (id) =>
     },
 });
 
-//--------------------Return the uuid of selected note------------
-
-
 
 //--------------------Get Selected Note Data----------------------
 const getSelectedDAta = () =>
