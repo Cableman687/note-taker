@@ -23,8 +23,8 @@ npm start
 
 ## Usage
 
-Link to App:
-https://safe-journey-06458.herokuapp.com/notes
+Link to Heroku App: 
+https://safe-journey-06458.herokuapp.com
 
 Create a note:
 1) Populate the text field 'Note Title' with a note title of your choosing.
