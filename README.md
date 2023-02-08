@@ -22,6 +22,9 @@ npm install
 npm start
 
 ## Usage
+
+https://safe-journey-06458.herokuapp.com/notes
+
 Create a note:
 1) Populate the text field 'Note Title' with a note title of your choosing.
 2) Populate the text field 'Note Text' with a description body for your note.
