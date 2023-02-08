@@ -23,6 +23,7 @@ npm start
 
 ## Usage
 
+Link to App:
 https://safe-journey-06458.herokuapp.com/notes
 
 Create a note:
