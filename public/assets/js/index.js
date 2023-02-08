@@ -66,19 +66,13 @@ const getSelectedDAta = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-    
-    
+       
 }).then((response) => {
   return response.json();
 }).then((data)=> {
   console.log(data);
 
-  
-
 })
-//-------------------Selected Note Handler-------------------------------------
-
-
 
 const renderActiveNote = async() => {
   hide(saveNoteBtn);
@@ -216,8 +210,6 @@ if (window.location.pathname === '/notes') {
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
-
-
 
 }
 
