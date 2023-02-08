@@ -4,6 +4,7 @@ let saveNoteBtn;
 let newNoteBtn;
 let noteList;
 
+
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
   noteText = document.querySelector('.note-textarea');
@@ -31,16 +32,22 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+});
 
 const saveNote = (note) =>
+
   fetch('/api/notes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  });
+    
+}).then((response) => {
+  return response.json();
+}).then((data)=> {
+  console.log(data);
+})
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
@@ -48,9 +55,35 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+});
 
-const renderActiveNote = () => {
+//--------------------Return the uuid of selected note------------
+
+
+
+//--------------------Get Selected Note Data----------------------
+const getSelectedDAta = () =>
+
+  fetch('/api/note/:id', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    
+    
+}).then((response) => {
+  return response.json();
+}).then((data)=> {
+  console.log(data);
+
+  
+
+})
+//-------------------Selected Note Handler-------------------------------------
+
+
+
+const renderActiveNote = async() => {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
@@ -66,15 +99,20 @@ const renderActiveNote = () => {
   }
 };
 
-const handleNoteSave = () => {
+const handleNoteSave = async() => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
+    id: noteList.value,
   };
-  saveNote(newNote).then(() => {
+  saveNote(newNote)
+  .then(() => {
+    console.log("getandrendernotes and renderactiveNote reached!");
     getAndRenderNotes();
     renderActiveNote();
   });
+
+  
 };
 
 // Delete the clicked note
@@ -116,6 +154,8 @@ const handleRenderSaveBtn = () => {
   }
 };
 
+
+
 // Render the list of note titles
 const renderNoteList = async (notes) => {
   let jsonNotes = await notes.json();
@@ -124,6 +164,7 @@ const renderNoteList = async (notes) => {
   }
 
   let noteListItems = [];
+  
 
   // Returns HTML element with or without a delete button
   const createLi = (text, delBtn = true) => {
@@ -171,13 +212,16 @@ const renderNoteList = async (notes) => {
 };
 
 // Gets notes from the db and renders them to the sidebar
-const getAndRenderNotes = () => getNotes().then(renderNoteList);
+const getAndRenderNotes = async() => getNotes().then(renderNoteList);
 
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);
   noteTitle.addEventListener('keyup', handleRenderSaveBtn);
   noteText.addEventListener('keyup', handleRenderSaveBtn);
+
+
+
 }
 
 getAndRenderNotes();
