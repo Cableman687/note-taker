@@ -4,7 +4,7 @@
 
 - The motivation to complete this challenge was to test my own skills gained in the most recent week of the coding bootcamp, including but not limited to: Server management and data exchange, use of Express, working with GET and POST requests, data persistance, routing, middleware and others?
 - This project was built as a testing ground for my own retention of the aforementioned skills.
-- This applicantion allows the user to create and manage notes in a server environment to keep track of ideas, lists and general note-taking.
+- This application allows the user to create and manage notes in a server environment to keep track of ideas, lists and general note-taking.
 - Through building this application, I learnt that there are many programming skills outside of what we learn throughout the week, and that research and collaboration is critical in order to achieve the best outcome for any given project.
 
 ## Installation
